@@ -14,13 +14,10 @@ app.use("/", userRoutes);
 
 // Connect to MongoDB
 mongoose
-  .connect(
-    "mongodb+srv://deloaiprivatelimited:deloai@clusterpromptitude.bplkt.mongodb.net/",
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    }
-  )
+  .connect("you connection string", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => console.log("MongoDB connected"))
   .catch((err) => {
     console.error("MongoDB connection error: ", err); // Log the actual error
